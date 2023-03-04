@@ -1,0 +1,127 @@
+set nocompatible			    " use vim and not vi
+filetype plugin on		    " load file-specific plugins
+filetype indent on		    " load file-specific indentation
+filetype on				        " enable filetype detection
+set encoding=utf-8
+set wrap linebreak        " wrap long lines and break lines at words
+set number				        " shows line numbers
+set cursorline            " highlight current line
+set ruler	  			        " shows cursor position in current line
+set showcmd				        " shows partially typed commands
+set nohlsearch				    " don't highlight search results
+set noincsearch				    " don't jump to search results as search string is being typed
+set noshowmode            " disable in favor of lightline.vim's statusline
+set nofoldenable          " don't fold text by default when opening files
+set autowriteall          " write current buffer when moving buffers
+syntax enable             " enable syntax highlighting
+let mapleader = " "
+
+colorscheme nord
+
+" Specify plugins using Vim-Plug
+" ---------------------------------------------
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vim-plug'
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-commentary'
+call plug#end()
+" ---------------------------------------------
+
+" Delete character to the right of the cursor
+inoremap <C-K> <Right><BS>
+" <C-E> to delete word to the right of cursor (converse of <C-W>)
+inoremap <C-E> <C-O>dw
+" <C-D> (control+D) to delete line to the right of cursor (converse of <C-U>)
+inoremap <C-D> <C-O>D
+
+" Useful for jumping to the end of the current line in insert mode
+inoremap <C-L> <Esc>A
+
+" Make Y work like D or C
+noremap Y y$
+
+" Stop cc, x, and s from overwriting default register
+nnoremap cc "_cc
+nnoremap x "_x
+nnoremap s "_s
+
+" Paste in visual mode without overwriting default register
+vnoremap p P
+
+" Mappings for navigating wrapped lines
+nnoremap j gj
+nnoremap k gk
+noremap 0 ^
+noremap I ^i
+noremap ^ 0
+
+" Navigate to line start and end from home row
+noremap H g^
+noremap L g$
+
+" Center cursor after various movements
+noremap '' ''zz
+noremap <C-O> <C-O>zz
+noremap <C-I> <C-I>zz
+noremap <C-]> <C-]>zz
+noremap <C-D> <C-D>zz
+noremap <C-U> <C-U>zz
+
+" Mappings for faster split window navigation
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+" Mappings for navigating buffers
+noremap <Leader>b :bnext<CR>
+noremap <Leader>B :bprevious<CR>
+
+" Mappings for navigating QuickFix menu
+noremap <Leader>cc <Cmd>cc<CR>
+noremap <Leader>cn <Cmd>cnext<CR>
+noremap <Leader>cp <Cmd>cprevious<CR>
+noremap <Leader>co <Cmd>copen<CR>
+noremap <Leader>cq <Cmd>cclose<CR>
+
+inoremap <expr> <BS> <SID>DeletePairedDelimeter()
+function! s:DeletePairedDelimeter() abort
+  " adapted from https://vi.stackexchange.com/a/24763
+
+  " First checks if the cursor as at line start or line end
+  " ...For reasons I haven't figured out, adding these separate cases
+  " ...fixes a problem with the original solution, which would
+  " ...delete the first character in a line when typing <BS> at line start
+  " ...or move the line below up when when typing <BS> at line start
+  if col(".") == col("^") + 1 || col(".") == col("$")
+    return "\<BS>"
+  else
+    " get characters on either side of cursor
+    let pair = getline('.')[col('.')-2 : col('.')-1]
+    echom pair
+    " check if cursor is placed inside a paired delimeter
+    if stridx('""''''()[]<>{}``', pair) % 2 == 0
+      " deletes paired delimiter
+      return "\<Right>\<BS>\<BS>"
+    else  " cursor was not between paired delimiters
+      " normal functionality
+      return "\<BS>"
+    endif
+  endif
+endfunction
+
+noremap <Leader>w <Cmd>write<CR>
+noremap <Leader>q <Cmd>quit<CR>
+noremap <Leader>Q <Cmd>quitall<CR>
+noremap <Leader>e <Cmd>edit<CR>
+
+" Search and replace
+nnoremap <Leader>s :%s/
+vnoremap <Leader>s :s/
+nnoremap <expr> <C-s> ':%s/' . expand('<cword>') . '/'
+
+" For easy macro playback
+nnoremap Q @q
+
+" Disable automatic commenting
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o  
