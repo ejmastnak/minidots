@@ -27,6 +27,10 @@ Plug 'tpope/vim-commentary'
 call plug#end()
 " ---------------------------------------------
 
+" Use a line cursor in insert mode and a block cursor elsewhere
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
 " Delete character to the right of the cursor
 inoremap <C-K> <Right><BS>
 " <C-E> to delete word to the right of cursor (converse of <C-W>)
