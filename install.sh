@@ -6,7 +6,7 @@ BASEDIR="$(pwd)"
 
 # Long directories
 [[ ! -d "${HOME}/.config" ]]       && ln -s ${BASEDIR}/config ~/.config || echo '~/.config exists; skipping and not overwriting.'
-[[ ! -d "${HOME}/.vim" ]]          && ln -s ${BASEDIR}/vim ~/.vim || echo '~/.vim exists; skipping and not overwriting.'
+[[ ! -d "${HOME}/.vim" ]]          && ln -s ${BASEDIR}/vim ~/.vim; mkdir ~/.vim/plugged || echo '~/.vim exists; skipping and not overwriting.'
 
 # Link stand-alone files not in XDG_CONFIG
 [[ ! -e "${HOME}/.bash_profile" ]] && ln -s ${BASEDIR}/bash_profile ~/.bash_profile || echo '~/.bash_profile exists; skipping and not overwriting.'
