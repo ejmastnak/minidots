@@ -7,6 +7,9 @@ alias ggd="git diff"
 alias gga="git add"
 alias ggc="git commit"
 alias ggp="git push"
+alias ggl="git log"
+alias ggb="git branch"
+alias ggr="git restore"
 
 # Some PHP/Laravel aliases
 alias art="php artisan"
