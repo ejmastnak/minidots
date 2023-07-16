@@ -49,6 +49,7 @@ set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
 " ---------------------------------------------
 " END BASIC SETTINGS
 
+source ~/.config/vifm/personal/navigation.vifm
 nnoremap ;; :source .vifm-context.vifm<CR>
 
 mark T ~/.local/share/vifm/Trash
