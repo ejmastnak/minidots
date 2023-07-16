@@ -34,7 +34,9 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
     \phistory,fhistory,dirstack,registers,bookmarks,bmarks
 
 " Set custom status line look
-set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
+highlight User1 ctermbg=blue ctermfg=white cterm=bold
+highlight User2 ctermbg=yellow ctermfg=black cterm=bold
+set statusline="%2* MINIDOTS %1* %A %10u:%-7g %15s %20d  %="
 
 " Format for time in file list
 set timefmt=%m/%d\ %H:%M  
