@@ -12,3 +12,6 @@ BASEDIR="$(pwd)"
 [[ ! -e "${HOME}/.bash_profile" ]] && ln -s ${BASEDIR}/bash_profile ~/.bash_profile || echo '~/.bash_profile exists; skipping and not overwriting.'
 [[ ! -e "${HOME}/.bashrc" ]]       && ln -s ${BASEDIR}/bashrc ~/.bashrc || echo '~/.bashrc exists; skipping and not overwriting.'
 [[ ! -e "${HOME}/.inputrc" ]]      && ln -s ${BASEDIR}/inputrc ~/.inputrc || echo '~/.inputrc exists; skipping and not overwriting.'
+
+# Try installing Vim plugins (if Vim is installed and executable)
+[[ -x "$(command -v vim)" ]] && vim -c "PlugInstall|wq"
