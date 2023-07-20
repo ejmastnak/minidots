@@ -14,4 +14,4 @@ BASEDIR="$(pwd)"
 [[ ! -e "${HOME}/.inputrc" ]]      && ln -s ${BASEDIR}/inputrc ~/.inputrc || echo '~/.inputrc exists; skipping and not overwriting.'
 
 # Try installing Vim plugins (if Vim is installed and executable)
-[[ -x "$(command -v vim)" ]] && vim -c "PlugInstall|wq"
+[[ -x "$(command -v vim)" ]] && vim -c "PlugInstall|q"
