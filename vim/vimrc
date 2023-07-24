@@ -17,6 +17,8 @@ syntax enable             " enable syntax highlighting
 let mapleader = " "
 
 colorscheme nord
+set laststatus=2  " to enable status bar
+
 
 " Specify plugins using Vim-Plug
 " ---------------------------------------------
