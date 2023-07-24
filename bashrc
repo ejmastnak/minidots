@@ -1,6 +1,9 @@
 # Use VI keybindings in the Bash shell
 set -o vi
 
+alias py='python'
+alias se='sudoedit'
+
 # Some Git alias
 alias gg="git status"
 alias ggd="git diff"
