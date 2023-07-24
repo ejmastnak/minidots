@@ -9,3 +9,4 @@ nnoremap gjp :cd ~/.password-store<CR>
 nnoremap gjs :cd ~/.ssh<CR>
 nnoremap gjt :cd ~/tmp<CR>
 nnoremap gjT :cd /tmp<CR>
+nnoremap gjv :cd /var<CR>
