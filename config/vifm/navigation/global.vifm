@@ -1,7 +1,7 @@
 nnoremap gcc :cd ~/minidots/config<CR>
-nnoremap gcv :cd ~/minidots/config/vifm<CR>
+nnoremap gcf :cd ~/minidots/config/vifm<CR>
 nnoremap gcn :goto ~/minidots/config/vifm/personal/navigation.vifm<CR>
-nnoremap gvv :cd ~/minidots/vim<CR>
+nnoremap gcv :cd ~/minidots/vim<CR>
 
 nnoremap ghh :cd ~<CR>
 nnoremap gjl :cd ~/.local<CR>
@@ -9,4 +9,7 @@ nnoremap gjp :cd ~/.password-store<CR>
 nnoremap gjs :cd ~/.ssh<CR>
 nnoremap gjt :cd ~/tmp<CR>
 nnoremap gjT :cd /tmp<CR>
-nnoremap gjv :cd /var<CR>
+
+nnoremap gvv :cd /var<CR>
+nnoremap gvr :cd /var/repo<CR>
+nnoremap gvw :cd /var/www<CR>
