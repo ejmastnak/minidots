@@ -81,6 +81,9 @@ nnoremap RM :edit README.md<CR>
 " Create a blah.md file
 nnoremap BB :edit blah.md<CR>
 
+" Open file under cursor with sudoedit
+nnoremap SS :!sudoedit %c<CR>
+
 " Mappings for faster renaming
 nnoremap I cw<c-a>
 nnoremap cc cw<c-u>
