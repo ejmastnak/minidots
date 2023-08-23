@@ -26,6 +26,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
+Plug 'wellle/targets.vim'
 call plug#end()
 " ---------------------------------------------
 
@@ -131,3 +132,8 @@ nnoremap Q @q
 
 " Disable automatic commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o  
+
+" Use d (delimiter) for targets.vim block text objects (requires targets.vim)
+autocmd User targets#mappings#user call targets#mappings#extend({
+    \ 'd': {'pair': [{'o':'(', 'c':')'}, {'o':'[', 'c':']'}, {'o':'{', 'c':'}'}]},
+    \ })
