@@ -12,3 +12,4 @@ nnoremap gjs :cd ~/.ssh<CR>
 nnoremap gjt :cd ~/tmp<CR>
 nnoremap gjT :cd /tmp<CR>
 nnoremap gjS :cd /srv<CR>
+nnoremap gjn :cd /etc/nginx<CR>
