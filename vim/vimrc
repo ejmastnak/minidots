@@ -122,6 +122,12 @@ noremap <Leader>q <Cmd>quit<CR>
 noremap <Leader>Q <Cmd>quitall<CR>
 noremap <Leader>e <Cmd>edit<CR>
 
+" Maps for vim-commentary
+xmap gl  <Plug>Commentary
+nmap gl  <Plug>Commentary
+omap gl  <Plug>Commentary
+nmap gll <Plug>CommentaryLine
+
 " Search and replace
 nnoremap <Leader>s :%s/
 vnoremap <Leader>s :s/
