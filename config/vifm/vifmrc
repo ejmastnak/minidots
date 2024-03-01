@@ -84,6 +84,9 @@ nnoremap BB :edit blah.md<CR>
 " Open file under cursor with sudoedit
 nnoremap SS :!sudoedit %c<CR>
 
+" Create symbolic link to file selected in inactve pane
+nnoremap gl :!ln -s %C %d/%C:t || ln -s %C %d/%C:t.bak<CR>
+
 " Mappings for faster renaming
 nnoremap I cw<c-a>
 nnoremap cc cw<c-u>
