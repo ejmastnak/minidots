@@ -13,3 +13,7 @@ nnoremap gjt :cd ~/tmp<CR>
 nnoremap gjT :cd /tmp<CR>
 nnoremap gjS :cd /srv<CR>
 nnoremap gjn :cd /etc/nginx<CR>
+
+
+nnoremap gll :cd /var/log<CR>
+nnoremap gln :cd /var/log/nging<CR>
