@@ -16,4 +16,4 @@ nnoremap gjn :cd /etc/nginx<CR>
 
 
 nnoremap gll :cd /var/log<CR>
-nnoremap gln :cd /var/log/nging<CR>
+nnoremap gln :cd /var/log/nginx<CR>
