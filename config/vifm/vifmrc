@@ -101,6 +101,10 @@ nnoremap RR :restart<CR>
 filetype {*.[1-8]},<text/troff> man ./%c
 fileviewer {*.[1-8]},<text/troff> man ./%c | col -b
 
+" Audio
+filetype {*.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus},
+        \<audio/*> mpv
+
 " MD5
 filetype *.md5
        \ {Check MD5 hash sum}
