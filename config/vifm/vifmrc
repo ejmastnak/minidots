@@ -7,7 +7,6 @@ set vimhelp             " use Vim-style help file instead of plain text
 set syscalls            " perform file operations with vifm instead of cp
 set trash               " use a temporary trash directory
 set dotdirs=rootparent  " show ../ only when directory is empty
-set confirm-=delete     " disable confirmation when deleting files
 set history=100         " directories to store in directory history
 set undolevels=100      " maximum number of changes that can be undone
 set nofollowlinks       " automatically resolve symbolic links on l or Enter.
