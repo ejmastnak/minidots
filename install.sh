@@ -4,7 +4,7 @@
 
 BASEDIR="$(pwd)"
 
-# Long directories
+# Link directories
 [[ ! -d "${HOME}/.config" ]]       && ln -s ${BASEDIR}/config ~/.config || echo '~/.config exists; skipping and not overwriting.'
 [[ ! -d "${HOME}/.vim" ]]          && ln -s ${BASEDIR}/vim ~/.vim; mkdir ~/.vim/plugged || echo '~/.vim exists; skipping and not overwriting.'
 
