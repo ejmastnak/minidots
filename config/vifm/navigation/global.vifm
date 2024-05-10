@@ -5,6 +5,7 @@ nnoremap gcv :cd ~/minidots/vim<CR>
 
 nnoremap ghh :cd ~<CR>
 nnoremap ghr :cd ~/repo/<CR>
+nnoremap ghd :cd ~/deploy/<CR>
 
 nnoremap gjl :cd ~/.local<CR>
 nnoremap gjp :cd ~/.password-store<CR>
