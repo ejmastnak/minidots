@@ -33,7 +33,7 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
     \phistory,fhistory,dirstack,registers,bookmarks,bmarks
 
 " Set custom status line look
-highlight User1 ctermbg=blue ctermfg=white cterm=bold
+highlight User1 ctermbg=blue ctermfg=black cterm=bold
 highlight User2 ctermbg=yellow ctermfg=black cterm=bold
 execute 'set' 'statusline="%2*  MINIDOTS ' .
       \ system("hostname") .
