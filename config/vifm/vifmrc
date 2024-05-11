@@ -16,7 +16,7 @@ set noincsearch         " don't jump to match while type
 set scrolloff=4         " add space between cursor and border in lists
 set slowfs=curlftpfs    " don't do too many requests to slow file systems
 set norunexec           " don't automatically run executable files on l or Enter
-colorscheme nord Default
+colorscheme tokyonight Default
 
 " Ignore case in search patterns unless the pattern 
 " contains at least one uppercase letter.
