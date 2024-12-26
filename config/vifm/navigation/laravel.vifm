@@ -6,6 +6,7 @@ nnoremap ;pj :goto $VIFM_CONTEXT/package.json<CR>
 nnoremap ;cj :goto $VIFM_CONTEXT/composer.json<CR>
 
 nnoremap ;ee :goto $VIFM_CONTEXT/.env<CR>
+nnoremap ;ll :cd $VIFM_CONTEXT/storage/logs<CR>
 
 nnoremap ;pu :cd $VIFM_CONTEXT/public<CR>
 
